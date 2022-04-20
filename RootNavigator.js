@@ -32,7 +32,7 @@ const RootNavigator = () => {
 			})}
 		>
 			<BottomTab.Screen
-				name="HomeScreenStack"
+				name="Home"
 				component={HomeScreenStack}
 				options={{
 					tabBarIcon: ({color, focused}) => (
@@ -46,7 +46,7 @@ const RootNavigator = () => {
 				}}
 			/>
 			<BottomTab.Screen
-				name="BrowseScreen"
+				name="Browse"
 				component={BrowseScreen}
 				options={{
 					tabBarIcon: ({color, focused}) => (

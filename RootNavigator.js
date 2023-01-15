@@ -3,21 +3,28 @@ import React from "react";
 import {Ionicons} from "@expo/vector-icons";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {createStackNavigator} from "@react-navigation/stack";
-import HomeScreen from "./screens/HomeScreen";
 import BrowseScreen from "./screens/BrowseScreen";
 import GroceryScreen from "./screens/GroceryScreen";
 import OrdersScreen from "./screens/OrdersScreen";
 import AccountScreen from "./screens/AccountScreen";
+import RestaurantDetail from "./screens/Home/RestuarantDetail/RestaurantDetail";
+import HomeScreen from "./screens/Home/HomeScreen";
 
 const BottomTab = createBottomTabNavigator();
 const HomeStack = createStackNavigator();
 
 const HomeScreenStack = () => {
 	return (
-		<HomeStack.Navigator screenOptions ={() => ({
-			headerShown: false,
-		})}>
+		<HomeStack.Navigator
+			screenOptions={() => ({
+				headerShown: false,
+			})}
+		>
 			<HomeStack.Screen name="HomeScreen" component={HomeScreen} />
+			<HomeStack.Screen
+				name="RestaurantDetail"
+				component={RestaurantDetail}
+			/>
 		</HomeStack.Navigator>
 	);
 };

@@ -2,25 +2,34 @@ import {Image, StyleSheet, Text, View} from "react-native";
 import React from "react";
 import {TouchableOpacity} from "react-native-gesture-handler";
 import {Heart} from "phosphor-react-native";
+import {useNavigation} from "@react-navigation/native";
 const RestaurantItem = ({restaurantsData}) => {
+	const navigation = useNavigation();
 	return (
 		restaurantsData.length != 0 &&
 		restaurantsData.map(restaurant => {
-			return <TouchableOpacity
-				style={{
-					padding: 15,
-					marginTop: 10,
-					backgroundColor: "white",
-					borderRadius: 12,
-					marginHorizontal: 12,
-				}}
-			>
-				<RestaurantImage image={restaurant.image_url} />
-				<RestaurantInfo
-					name={restaurant.name}
-					rating={restaurant.rating}
-				/>
-			</TouchableOpacity>;
+			return (
+				<TouchableOpacity
+					onPress={() =>
+						navigation.navigate("RestaurantDetail", {
+							restaurantDetail: restaurant,
+						})
+					}
+					style={{
+						padding: 15,
+						marginTop: 10,
+						backgroundColor: "white",
+						borderRadius: 12,
+						marginHorizontal: 12,
+					}}
+				>
+					<RestaurantImage image={restaurant.image_url} />
+					<RestaurantInfo
+						name={restaurant.name}
+						rating={restaurant.rating}
+					/>
+				</TouchableOpacity>
+			);
 		})
 	);
 };

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {Text, View} from "react-native";
 import {HEADER_TAB_STYLES} from "./headerTabStyles";
 import HeaderButton from "./HeaderButton";

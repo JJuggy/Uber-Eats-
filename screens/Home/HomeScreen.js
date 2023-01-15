@@ -1,9 +1,9 @@
 import {StyleSheet, Text, View, SafeAreaView} from "react-native";
 import React, {useEffect, useState} from "react";
-import HeaderTab from "../components/Home/HeaderTab/HeaderTab";
-import Categories from "../components/Home/Categories/Categories";
-import {SearchBar} from "../components/Home/SearchField/SearchField";
-import RestaurantItem from "../components/Home/RestaurantItem";
+import HeaderTab from "../../components/Home/HeaderTab/HeaderTab";
+import Categories from "../../components/Home/Categories/Categories";
+import {SearchBar} from "../../components/Home/SearchField/SearchField";
+import RestaurantItem from "../../components/Home/RestaurantItem";
 import {ScrollView} from "react-native-gesture-handler";
 
 function HomeScreen() {
